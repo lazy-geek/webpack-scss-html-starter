@@ -14,11 +14,11 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: "*.html", context: path.resolve(__dirname, 'src') },
-                { from: "assets", to: "./assets", context: path.resolve(__dirname, 'src') },
+        { from: "assets", to: "./assets", context: path.resolve(__dirname, 'src'), noErrorOnMissing: true, },
             ],
         }),
     ],
-    entry: path.resolve(__dirname, 'src','scss','style.scss'),
+  entry: path.resolve(__dirname, 'src', 'scss', 'style.scss'),
     module: {
         rules: [
             {
